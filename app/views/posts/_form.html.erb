@@ -1,0 +1,23 @@
+<% if @post.errors.any? %>
+  <div class="errors">
+    <p>Please correct the following <%= pluralize(@post.errors.count, "error") %>:</p>
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_for @post do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :content %>
+    <%= f.text_area :content, size: "12x12" %>
+  </div>
+  <div>
+    <%= f.submit @post.new_record? ? "Create Post" : "Update Post" %>
+  </div>
+<% end %>
