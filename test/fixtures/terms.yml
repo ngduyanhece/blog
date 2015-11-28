@@ -5,11 +5,20 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
-  id: 1
-  title: 'Featured Content'
+  post_id: 1
+  category_id: 1
 two:
-  id: 2
-  title: 'Jazz'
+  post_id: 2
+  category_id: 2
 three:
-  id: 3
-  title: 'Sports'
+  post_id: 3
+  category_id: 2
+four:
+  post_id: 4
+  category_id: 3
+five:
+  post_id: 5
+  category_id: 3
+six:
+  post_id: 4
+  category_id: 1
